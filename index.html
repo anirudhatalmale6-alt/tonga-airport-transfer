@@ -64,7 +64,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
 }
 
 .nav.scrolled {
-  background: rgba(151, 252, 231, 0.92);
+  background: rgba(74, 74, 74, 0.95);
   backdrop-filter: blur(20px);
   padding: 14px 48px;
   box-shadow: 0 4px 30px rgba(0,0,0,0.15);
@@ -76,9 +76,11 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   font-size: 1.6rem;
   color: #1A1A1A;
   text-decoration: none;
+  transition: color 0.4s;
 }
 
-.nav-logo em { font-style: normal; color: #1A1A1A; }
+.nav-logo em { font-style: normal; color: #1A1A1A; transition: color 0.4s; }
+.nav.scrolled .nav-logo, .nav.scrolled .nav-logo em { color: #FFFFFF; }
 
 .nav-logo span {
   display: inline-block;
@@ -111,6 +113,9 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   position: relative;
 }
 
+.nav.scrolled .nav-links a { color: rgba(255,255,255,0.85); }
+.nav.scrolled .nav-links a:hover { color: #FFFFFF; }
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -121,6 +126,8 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   background: #1A1A1A;
   transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+.nav.scrolled .nav-links a::after { background: #FFFFFF; }
 
 .nav-links a:hover { color: #1A1A1A; }
 .nav-links a:hover::after { width: 100%; }
@@ -138,7 +145,10 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   height: 2px;
   background: #1A1A1A;
   border-radius: 2px;
+  transition: background 0.4s;
 }
+
+.nav.scrolled .nav-toggle span { background: #FFFFFF; }
 
 /* ─── HERO ─── */
 .hero {
@@ -987,7 +997,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
 
 /* ─── FOOTER ─── */
 .footer {
-  background: var(--charcoal);
+  background: #4A4A4A;
   padding: 56px 48px 36px;
 }
 
@@ -1265,7 +1275,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
         WhatsApp Us
       </a>
-      <a href="mailto:team@kentigate.com" class="cta-btn">
+      <a href="mailto:team@kentigate.co" class="cta-btn">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
         Send Email
       </a>
@@ -1305,7 +1315,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
         </li>
         <li class="footer-contact-item">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          team@kentigate.com
+          team@kentigate.co
         </li>
       </ul>
     </div>
