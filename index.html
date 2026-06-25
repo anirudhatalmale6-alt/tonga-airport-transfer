@@ -920,6 +920,55 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   line-height: 1.55;
 }
 
+/* ─── BOOKING EMBED ─── */
+.booking-section {
+  background: var(--warm-cream);
+  padding: 80px 48px 100px;
+}
+
+.booking-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.booking-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.booking-header p {
+  color: #7A6B62;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.booking-frame-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.booking-frame-wrapper iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .booking-section { padding: 60px 16px 80px; }
+  .booking-frame-wrapper iframe { height: 600px; }
+}
+
 /* ─── CTA ─── */
 .cta-section {
   padding: 60px 48px;
@@ -1185,6 +1234,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   <a href="#" class="nav-logo">Tonga Airport Transfer</a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#booking">Book</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-toggle" id="navToggle" aria-label="Menu">
@@ -1210,7 +1260,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
       Inquire via WhatsApp
     </a>
-    <a href="https://dispatch.allrideapps.net/web-booking-form?enc=GpCvsRVNQmq/QlLQH0/83rBY5umVdvdZ3vzuUFOYBmFYc/g1fiGT1zre5PPs7n4fPPy0GL97CwYcpwHhGSyII4FWvDmrHFwRVtzYFEqj4zwtZevmuZc62bN4mqrLkCDFkck2j6cpReqEonQRXG9nMrX8+wyZLBGxlotvqlS1Vvy78PYwQ7c/CACNeabd0alC4QONh6L+s4HO4+adDgT7FqTPuSbUeSNPuzJ8/HvmUqgIFV/hQXSw8LHr0OR6n/Me" target="_blank">
+    <a href="#booking">
       Book Now
     </a>
   </div>
@@ -1237,7 +1287,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Flight tracking</li>
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Door-to-door service</li>
       </ul>
-      <a href="https://dispatch.allrideapps.net/web-booking-form?enc=GpCvsRVNQmq/QlLQH0/83rBY5umVdvdZ3vzuUFOYBmFYc/g1fiGT1zre5PPs7n4fPPy0GL97CwYcpwHhGSyII4FWvDmrHFwRVtzYFEqj4zwtZevmuZc62bN4mqrLkCDFkck2j6cpReqEonQRXG9nMrX8+wyZLBGxlotvqlS1Vvy78PYwQ7c/CACNeabd0alC4QONh6L+s4HO4+adDgT7FqTPuSbUeSNPuzJ8/HvmUqgIFV/hQXSw8LHr0OR6n/Me" target="_blank" class="service-book-btn">Book Now</a>
+      <a href="#booking" class="service-book-btn">Book Now</a>
     </div>
 
     <div class="service-card card-car">
@@ -1253,7 +1303,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Insurance included</li>
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Flexible drop-off</li>
       </ul>
-      <a href="https://dispatch.allrideapps.net/web-booking-form?enc=GpCvsRVNQmq/QlLQH0/83rBY5umVdvdZ3vzuUFOYBmFYc/g1fiGT1zre5PPs7n4fPPy0GL97CwYcpwHhGSyII4FWvDmrHFwRVtzYFEqj4zwtZevmuZc62bN4mqrLkCDFkck2j6cpReqEonQRXG9nMrX8+wyZLBGxlotvqlS1Vvy78PYwQ7c/CACNeabd0alC4QONh6L+s4HO4+adDgT7FqTPuSbUeSNPuzJ8/HvmUqgIFV/hQXSw8LHr0OR6n/Me" target="_blank" class="service-book-btn">Book Now</a>
+      <a href="#booking" class="service-book-btn">Book Now</a>
     </div>
 
     <div class="service-card card-scooter">
@@ -1269,7 +1319,7 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Walk-in or reserve online</li>
         <li><span class="feature-check"><svg viewBox="0 0 12 12"><path d="M10 3L4.5 8.5 2 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Valid ID required</li>
       </ul>
-      <a href="https://dispatch.allrideapps.net/web-booking-form?enc=GpCvsRVNQmq/QlLQH0/83rBY5umVdvdZ3vzuUFOYBmFYc/g1fiGT1zre5PPs7n4fPPy0GL97CwYcpwHhGSyII4FWvDmrHFwRVtzYFEqj4zwtZevmuZc62bN4mqrLkCDFkck2j6cpReqEonQRXG9nMrX8+wyZLBGxlotvqlS1Vvy78PYwQ7c/CACNeabd0alC4QONh6L+s4HO4+adDgT7FqTPuSbUeSNPuzJ8/HvmUqgIFV/hQXSw8LHr0OR6n/Me" target="_blank" class="service-book-btn">Book Now</a>
+      <a href="#booking" class="service-book-btn">Book Now</a>
     </div>
 
     <div class="service-card card-villa">
@@ -1291,6 +1341,17 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
 </section>
 
 
+
+<!-- BOOKING -->
+<section class="booking-section" id="booking">
+  <div class="booking-header">
+    <h2>Book Your Transfer</h2>
+    <p>Fill in your details below and we'll have a driver ready for you at Fua'amotu Airport.</p>
+  </div>
+  <div class="booking-frame-wrapper">
+    <iframe src="https://dispatch.allrideapps.net/web-booking-form?enc=GpCvsRVNQmq/QlLQH0/83rBY5umVdvdZ3vzuUFOYBmFYc/g1fiGT1zre5PPs7n4fPPy0GL97CwYcpwHhGSyII4FWvDmrHFwRVtzYFEqj4zwtZevmuZc62bN4mqrLkCDFkck2j6cpReqEonQRXG9nMrX8+wyZLBGxlotvqlS1Vvy78PYwQ7c/CACNeabd0alC4QONh6L+s4HO4+adDgT7FqTPuSbUeSNPuzJ8/HvmUqgIFV/hQXSw8LHr0OR6n/Me" title="Book Your Transfer" loading="lazy" allow="geolocation"></iframe>
+  </div>
+</section>
 
 <!-- CTA -->
 <section class="cta-section" id="contact">
