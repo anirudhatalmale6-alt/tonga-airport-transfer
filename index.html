@@ -726,6 +726,237 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
   background: #333333;
 }
 
+/* ─── MEET OUR DRIVERS ─── */
+.drivers {
+  background: var(--warm-cream);
+  padding: 100px 48px;
+}
+
+.drivers-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 64px;
+}
+
+.drivers-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.drivers-header p {
+  color: #7A6B62;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.drivers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.driver-card {
+  background: var(--warm-white);
+  border-radius: 24px;
+  padding: 36px 28px;
+  text-align: center;
+  border: 1px solid rgba(26,18,16,0.06);
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.driver-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.driver-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+}
+
+.driver-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+  color: #1A1A1A;
+}
+
+.driver-card:nth-child(1) .driver-avatar { background: linear-gradient(135deg, #97FCB5, #B0FDC8); }
+.driver-card:nth-child(2) .driver-avatar { background: linear-gradient(135deg, #97FCE7, #B0FDF0); }
+.driver-card:nth-child(3) .driver-avatar { background: linear-gradient(135deg, #97DEFC, #B0E8FD); }
+.driver-card:nth-child(4) .driver-avatar { background: linear-gradient(135deg, #97FCB5, #97DEFC); }
+
+.driver-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.driver-role {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #7A6B62;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.driver-card > p {
+  font-size: 0.92rem;
+  color: #8A7B72;
+  line-height: 1.6;
+}
+
+.driver-years {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 16px;
+  background: var(--warm-cream);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+/* ─── TRUST / STATS ─── */
+.trust-bar {
+  background: linear-gradient(135deg, #97FCB5 0%, #97FCE7 50%, #97DEFC 100%);
+  padding: 56px 48px;
+}
+
+.trust-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.trust-stat h3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #1A1A1A;
+  letter-spacing: -1px;
+}
+
+.trust-stat p {
+  font-size: 0.92rem;
+  color: rgba(26,26,26,0.65);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* ─── REVIEWS ─── */
+.reviews {
+  background: var(--warm-white);
+  padding: 100px 48px;
+}
+
+.reviews-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+
+.reviews-header h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+}
+
+.reviews-header p {
+  color: #7A6B62;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-top: 16px;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background: var(--warm-cream);
+  border-radius: 20px;
+  padding: 32px 28px;
+  border: 1px solid rgba(26,18,16,0.06);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.review-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.review-stars {
+  color: #F5A623;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.review-card blockquote {
+  font-size: 0.95rem;
+  color: #1A1A1A;
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.review-author {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #7A6B62;
+}
+
+.review-author span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: #AAA;
+  margin-top: 2px;
+}
+
+@media (max-width: 1024px) {
+  .drivers-grid { grid-template-columns: repeat(2, 1fr); max-width: 600px; }
+  .trust-stats { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 500px; }
+}
+
+@media (max-width: 768px) {
+  .drivers { padding: 80px 24px; }
+  .drivers-grid { grid-template-columns: 1fr; max-width: 360px; }
+  .trust-bar { padding: 40px 24px; }
+  .trust-stats { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .reviews { padding: 80px 24px; }
+}
+
 /* ─── HOW IT WORKS ─── */
 .how-it-works {
   background: var(--warm-cream);
@@ -1293,6 +1524,100 @@ h1, h2, h3, h4 { font-family: 'Syne', sans-serif; }
 
 
 
+<!-- MEET OUR DRIVERS -->
+<section class="drivers">
+  <div class="drivers-header">
+    <div class="section-tag">Our Team</div>
+    <h2>Meet Our Drivers</h2>
+    <p>Our friendly local drivers know every road on Tongatapu. They'll greet you with a smile and make sure you get where you need to go safely.</p>
+  </div>
+
+  <div class="drivers-grid">
+    <div class="driver-card">
+      <div class="driver-avatar">S</div>
+      <h4>Sione</h4>
+      <div class="driver-role">Senior Driver</div>
+      <p>Knows every shortcut on the island. Always on time, always smiling. Sione has been driving airport runs since 2018.</p>
+      <span class="driver-years">8+ years experience</span>
+    </div>
+
+    <div class="driver-card">
+      <div class="driver-avatar">T</div>
+      <h4>Tevita</h4>
+      <div class="driver-role">Airport Specialist</div>
+      <p>Tevita tracks every incoming flight so he's ready when you land. Great with luggage and even better with local tips.</p>
+      <span class="driver-years">5+ years experience</span>
+    </div>
+
+    <div class="driver-card">
+      <div class="driver-avatar">M</div>
+      <h4>Mele</h4>
+      <div class="driver-role">Driver</div>
+      <p>Patient, safe, and speaks great English. Mele makes every ride comfortable, especially for families with kids.</p>
+      <span class="driver-years">4+ years experience</span>
+    </div>
+
+    <div class="driver-card">
+      <div class="driver-avatar">A</div>
+      <h4>'Akilisi</h4>
+      <div class="driver-role">Driver</div>
+      <p>Born and raised in Nuku'alofa. 'Akilisi knows the best restaurants, beaches, and hidden spots to recommend.</p>
+      <span class="driver-years">3+ years experience</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-stats">
+    <div class="trust-stat">
+      <h3>2,000+</h3>
+      <p>Happy travellers</p>
+    </div>
+    <div class="trust-stat">
+      <h3>5,000+</h3>
+      <p>Airport rides completed</p>
+    </div>
+    <div class="trust-stat">
+      <h3>8+</h3>
+      <p>Years operating</p>
+    </div>
+    <div class="trust-stat">
+      <h3>100%</h3>
+      <p>Prepaid, no surprises</p>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews">
+  <div class="reviews-header">
+    <div class="section-tag">Testimonials</div>
+    <h2>What Travellers Say</h2>
+    <p>Real feedback from visitors who booked their Tonga airport transfer with us.</p>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"Driver was already waiting when we came out of the airport. Super friendly, helped with all our bags. Best $17 we spent in Tonga!"</blockquote>
+      <div class="review-author">Sarah T.<span>Auckland, New Zealand</span></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"We rented a car for 5 days and explored the whole island. Pickup at the airport was seamless. Will definitely use again on our next trip."</blockquote>
+      <div class="review-author">James &amp; Lisa M.<span>Sydney, Australia</span></div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <blockquote>"Our flight was delayed by 2 hours and the driver still waited for us. That's real service. Highly recommend for anyone visiting Tonga."</blockquote>
+      <div class="review-author">David K.<span>San Francisco, USA</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-content">
@@ -1370,6 +1695,8 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.service-card').forEach((el, i) => { el.dataset.delay = i * 150; observer.observe(el); });
 document.querySelectorAll('.why-feature').forEach((el, i) => { el.dataset.delay = i * 120; observer.observe(el); });
 document.querySelectorAll('.step').forEach((el, i) => { el.dataset.delay = i * 200; observer.observe(el); });
+document.querySelectorAll('.driver-card').forEach((el, i) => { el.dataset.delay = i * 150; observer.observe(el); });
+document.querySelectorAll('.review-card').forEach((el, i) => { el.dataset.delay = i * 150; observer.observe(el); });
 
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
